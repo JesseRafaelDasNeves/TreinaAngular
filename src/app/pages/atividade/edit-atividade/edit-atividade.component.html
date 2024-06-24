@@ -1,0 +1,39 @@
+<app-container class="form-contato">
+    <section>
+        <header>
+            <h1>Alterar Atividade</h1>
+        </header>
+        <form [formGroup]="atividadeForm" (ngSubmit)="alterarAtividade()" >
+
+            <div class="flex-container">
+                <mat-form-field appearance="fill">
+                    <mat-label>Contato</mat-label>
+                    <mat-select formControlName="idContato">
+                      <mat-option *ngFor="let contato of contatos" [value]="contato.id">
+                        {{contato.name}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+
+            <div class="flex-container">
+                <mat-form-field appearance="fill">
+                    <mat-label>Título</mat-label>
+                    <input matInput formControlName="titulo" required>
+                </mat-form-field>
+            </div>
+
+            <div class="flex-container">
+                <mat-form-field appearance="fill">
+                    <mat-label>Descrição</mat-label>
+                    <input matInput formControlName="descricao" required>
+                </mat-form-field>
+            </div>
+
+            <div class="flex-container">
+                <button mat-flat-button color="primary" type="submit" >Salvar</button>
+                <button mat-flat-button color="primary" routerLink="/atividades">Cancelar</button>
+            </div>
+        </form>
+    </section>
+</app-container>

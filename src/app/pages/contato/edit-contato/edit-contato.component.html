@@ -1,0 +1,33 @@
+<app-container class="form-contato">
+    <section>
+        <header>
+            <h1>Editar Contato</h1>
+        </header>
+        <form [formGroup]="contatoForm" (ngSubmit)="alteraContato()" >
+            <div class="flex-container">
+                <mat-form-field appearance="fill">
+                    <mat-label>Nome</mat-label>
+                    <input matInput formControlName="name" required>
+                </mat-form-field>
+            </div>
+            <div class="flex-container">
+                <mat-form-field appearance="fill">
+                    <mat-label>E-mail</mat-label>
+                    <input matInput formControlName="email" placeholder="pat@example.com" required >
+                    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="flex-container">
+                <mat-form-field appearance="fill">
+                    <mat-label>CEP</mat-label>
+                    <input matInput formControlName="cep">
+                </mat-form-field>
+            </div>
+            <div class="flex-container">
+                <button mat-flat-button color="primary" type="submit" >Salvar</button>
+                <button mat-flat-button color="primary" routerLink="/">Cancelar</button>
+            </div>
+        </form>
+    </section>
+</app-container>
