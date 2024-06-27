@@ -22,6 +22,7 @@ import { ConsultaAtividadeComponent } from './pages/atividade/consulta-atividade
 import { CreateAtividadeComponent } from './pages/atividade/create-atividade/create-atividade.component';
 import { MatSelectModule } from '@angular/material/select';
 import { EditAtividadeComponent } from './pages/atividade/edit-atividade/edit-atividade.component';
+import { MenuLeftComponent } from './componentes/menu-left/menu-left.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { EditAtividadeComponent } from './pages/atividade/edit-atividade/edit-at
     EditContatoComponent,
     ConsultaAtividadeComponent,
     CreateAtividadeComponent,
-    EditAtividadeComponent
+    EditAtividadeComponent,
+    MenuLeftComponent
   ],
   imports: [
     BrowserModule,

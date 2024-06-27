@@ -6,7 +6,7 @@
         <form [formGroup]="atividadeForm" (ngSubmit)="alterarAtividade()" >
 
             <div class="flex-container">
-                <mat-form-field appearance="fill">
+                <mat-form-field appearance="fill" class="full-width">
                     <mat-label>Contato</mat-label>
                     <mat-select formControlName="idContato">
                       <mat-option *ngFor="let contato of contatos" [value]="contato.id">
@@ -17,14 +17,14 @@
             </div>
 
             <div class="flex-container">
-                <mat-form-field appearance="fill">
+                <mat-form-field appearance="fill" class="full-width">
                     <mat-label>Título</mat-label>
                     <input matInput formControlName="titulo" required>
                 </mat-form-field>
             </div>
 
             <div class="flex-container">
-                <mat-form-field appearance="fill">
+                <mat-form-field appearance="fill" class="full-width">
                     <mat-label>Descrição</mat-label>
                     <input matInput formControlName="descricao" required>
                 </mat-form-field>

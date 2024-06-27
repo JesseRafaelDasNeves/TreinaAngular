@@ -49,13 +49,10 @@ export class EditAtividadeComponent {
     
     const contatoTela: Atividade = this.atividadeForm.value;
     this.service.editar(contatoTela).subscribe(() => {
-      // Sucesso no envio dos dados
       console.log('Atividade alterada com sucesso!');
-      // Limpar o formulário
       this.router.navigate(['/atividades']);
     }, 
     (error) => {
-      // Erro ao enviar os dados
       alert('Erro ao alterar o Atividade');
       console.error('Erro ao alterar o Atividade:', error);
     });

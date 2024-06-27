@@ -31,12 +31,14 @@ export class ContatoConsultaComponent implements OnInit {
     console.log(contato);
     this.service.excluir(contato).subscribe(() => {
       // Sucesso ao excluir dos dados
-      console.log('Usuário excluído com sucesso!');
+      console.log('Contato excluído com sucesso!');
+
+      //Buscar e excluir as atividades relacionadas a esse contato
       }, 
       (error) => {
       // Erro ao excluir os dados
-      alert('Erro ao excluir o usuário');
-      console.error('Erro ao excluir o usuário:', error);
+      alert('Erro ao excluir o Contato');
+      console.error('Erro ao excluir o Contato:', error);
     });
   }
 }

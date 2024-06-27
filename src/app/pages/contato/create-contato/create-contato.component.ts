@@ -40,13 +40,10 @@ export class CreateContatoComponent implements OnInit {
     
     const contatoTela: Contato = this.contatoForm.value;
     this.service.criar(contatoTela).subscribe(() => {
-      // Sucesso no envio dos dados
       console.log('Usuário criado com sucesso!');
-      // Limpar o formulário
       this.router.navigate(['/']);
     }, 
     (error) => {
-      // Erro ao enviar os dados
       alert('Erro ao criar o usuário');
       console.error('Erro ao criar o usuário:', error);
     });

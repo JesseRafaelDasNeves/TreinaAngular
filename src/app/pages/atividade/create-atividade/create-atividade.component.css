@@ -10,3 +10,7 @@
     gap: 12px;
     margin: 16px 0;
 }
+
+.full-width {
+    width: 100%;
+}
