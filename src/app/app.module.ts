@@ -23,6 +23,7 @@ import { CreateAtividadeComponent } from './pages/atividade/create-atividade/cre
 import { MatSelectModule } from '@angular/material/select';
 import { EditAtividadeComponent } from './pages/atividade/edit-atividade/edit-atividade.component';
 import { MenuLeftComponent } from './componentes/menu-left/menu-left.component';
+import { NgxMaskDirective, provideNgxMask } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { MenuLeftComponent } from './componentes/menu-left/menu-left.component';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    MatSelectModule
+    MatSelectModule,
+    NgxMaskDirective
   ],
   providers: [],
   bootstrap: [AppComponent]

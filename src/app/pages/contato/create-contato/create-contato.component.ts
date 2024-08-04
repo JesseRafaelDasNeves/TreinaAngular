@@ -18,7 +18,7 @@ export class CreateContatoComponent implements OnInit {
     this.contatoForm = new FormGroup({
       name: new FormControl('', Validators.required),
       email: new FormControl('', [Validators.required, Validators.email]),
-      cep: new FormControl('', Validators.required)
+      cep: new FormControl('')
     });
   }
 
